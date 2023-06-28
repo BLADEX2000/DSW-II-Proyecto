@@ -8,6 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 import com.dswii.portalalumnos.carrera.Carrera;
 import com.dswii.portalalumnos.grado.Grado;
@@ -30,6 +31,7 @@ public class Alumno {
     private String apealumno;
 
     @NotBlank
+    @Pattern(regexp ="/d{9}/")
     private String telfalumno;
 
     @ManyToOne

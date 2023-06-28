@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 import lombok.Data;
 
@@ -23,6 +24,7 @@ public class Profesor {
     @NotBlank
     private String apeprofesor;
 
+    @Pattern(regexp ="/d{9}/")
     @NotBlank
     private String telfprofesor;
 
