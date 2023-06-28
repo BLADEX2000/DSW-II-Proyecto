@@ -26,8 +26,8 @@ public class AsignaturaController {
     AsignaturaRepository asignaturaRepository;
 
     @GetMapping
-    public Page<Asignatura> list(Pageable pageable) {
-        return this.asignaturaRepository.findAll(pageable);
+    public Iterable<Asignatura> list() {
+        return this.asignaturaRepository.findAll();
     }
     
     @PostMapping

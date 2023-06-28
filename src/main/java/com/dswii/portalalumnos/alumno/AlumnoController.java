@@ -24,8 +24,8 @@ public class AlumnoController {
     AlumnoRepository alumnoRepository;
 
     @GetMapping
-    public Page<Alumno> list(Pageable pageable) {
-        return this.alumnoRepository.findAll(pageable);
+    public Iterable<Alumno> list() {
+        return this.alumnoRepository.findAll();
     }
     
     @PostMapping
