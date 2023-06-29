@@ -1,6 +1,5 @@
 package com.dswii.portalalumnos.profesor;
 
-import javax.transaction.Transactional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
@@ -29,7 +28,6 @@ public class ProfesorController {
     }
     
 
-    @Transactional
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public Profesor register(@RequestBody Profesor profesor) {
@@ -41,14 +39,12 @@ public class ProfesorController {
         return ResponseEntity.of(this.profesorRepository.findById(id));
     }
 
-    @Transactional
     @DeleteMapping("{id}")
     public void delete(@PathVariable Long id) {
         this.profesorRepository.deleteById(id);
     }
 
 
-    @Transactional
     @PutMapping
     public Profesor edit(@RequestBody  Profesor profesor) {
 

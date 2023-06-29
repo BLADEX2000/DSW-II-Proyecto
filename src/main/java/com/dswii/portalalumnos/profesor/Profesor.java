@@ -24,7 +24,7 @@ public class Profesor {
     @NotBlank
     private String apeprofesor;
 
-    @Pattern(regexp ="/d{9}/")
+    @Pattern(regexp = "\\d{9}")
     @NotBlank
     private String telfprofesor;
 
